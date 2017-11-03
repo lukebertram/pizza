@@ -10,7 +10,97 @@
   </head>
   <body>
     <div class="container">
-
+      <h1>Order a Pizza!</h1>
+      <form id="order-form" class="form-control">
+      <!-- SELECT PIZZA SIZE (radio buttons) -->
+        <div class="form-control form-group size">
+          <legend>Pizza size:</legend>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" name="pizza-size" class="form-check-input" value="small">
+            Small - $10
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" name="pizza-size" class="form-check-input" value="medium">
+            Medium - $14
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" name="pizza-size" class="form-check-input" value="large">
+            Large - $18
+            </label>
+          </div>
+        </div>
+      <!-- SELECT PIZZA TOPPINGS (check boxes)-->
+      <div class="form-control form-group size">
+        <legend>Pizza toppings (+$1 each):</legend>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="toppings" class="form-check-input" value="pepperoni">
+          Pepperoni
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="toppings" class="form-check-input" value="olive">
+          Olive
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="toppings" class="form-check-input" value="mushroom">
+          Mushroom
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="toppings" class="form-check-input" value="green pepper">
+          Green Pepper
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="toppings" class="form-check-input" value="onion">
+          Onion
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="toppings" class="form-check-input" value="sausage">
+          Sausage
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="toppings" class="form-check-input" value="artichoke">
+          Artichoke
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="toppings" class="form-check-input" value="canadian bacon">
+          Canadian Bacon
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" name="toppings" class="form-check-input" value="pineapple">
+          Pineapple
+          </label>
+        </div>
+      </div>
+        <div class="form-check toppings form-control">
+          <input type="checkbox" name="toppings" value="green pepper">
+          <input type="checkbox" name="toppings" value="onion">
+          <input type="checkbox" name="toppings" value="sausage">
+          <input type="checkbox" name="toppings" value="artichoke">
+          <input type="checkbox" name="toppings" value="canadian bacon">
+          <input type="checkbox" name="toppings" value="pineapple">
+        </div>
+      </form>
     </div>
   </body>
 </html>

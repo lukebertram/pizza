@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 
   //when the order form is submitted
-  $("#orderForm").submit(function(event){
+  $("#order-form").submit(function(event){
     event.preventDefault();
 
 
