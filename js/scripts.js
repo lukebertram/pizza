@@ -1,5 +1,5 @@
 //Back-end business
-
+var pizzaCounter = 1;
 //Pizza, an object to represent individual pizzas
 function Pizza(size, toppingsArray){
   this.size = size;
@@ -25,7 +25,7 @@ Pizza.prototype.setPrice = function(){
 }
 
 //Order, an object to represent an order of one or more pizzas
-function Order(pizzas){
+function Order(){
   this.pizzas = [];
   this.orderTotal;
   this.setOrderTotal();
@@ -61,19 +61,19 @@ $(document).ready(function(){
           '<legend>Pizza size:</legend>' +
           '<div class="form-check">' +
             '<label class="form-check-label">' +
-              '<input type="radio" name="pizza-size" class="form-check-input" value="Small">' +
+              '<input type="radio" name="pizza-size' + pizzaCounter + '" class="form-check-input" value="Small">' +
             'Small - $10' +
             '</label>' +
           '</div>' +
           '<div class="form-check">' +
             '<label class="form-check-label">' +
-              '<input type="radio" name="pizza-size" class="form-check-input" value="Medium">' +
+              '<input type="radio" name="pizza-size' + pizzaCounter + '" class="form-check-input" value="Medium">' +
             'Medium - $14' +
             '</label>' +
           '</div>' +
           '<div class="form-check">' +
             '<label class="form-check-label">' +
-              '<input type="radio" name="pizza-size" class="form-check-input" value="Large">' +
+              '<input type="radio" name="pizza-size' + pizzaCounter + '" class="form-check-input" value="Large">' +
             'Large - $18' +
             '</label>' +
           '</div>' +
@@ -136,28 +136,31 @@ $(document).ready(function(){
           '</div>' +
         '</div>' +
       '</div>'
-                              );
-
-
+    );
   });
 
 
   //when the order form is submitted
   $("#order-form").submit(function(event){
     event.preventDefault();
-    var size = $("input:radio[name=pizza-size]:checked").val()
-    var toppings = [];
-    $("input:checkbox[name=toppings]:checked").each(function(){
-      toppings.push($(this).val());
+    //create a new order to hold pizzas
+    order = new Order();
+    $(".new-pizza").each(function() {
+      var name = $(this).find("input:radio").attr("name");
+      debugger
+      var size = $(this).find("input:radio[name=" + name + "]:checked").val()
+      var toppings = [];
+      $(this).find("input:checkbox[name=toppings]:checked").each(function(){
+        toppings.push($(this).val());
+      });
+      var pizza = new Pizza(size, toppings);
+      order.pizzas.push(pizza);
+      //#final-order is for hiding/showing
+      //#pizza-list is for displaying ordered pizzas
+      $("#pizza-list").append('<li>'+ pizza.size + ' ' + pizza.toppings.join(", ") + ' Pizza' +
+                              '<br> Total: $' + pizza.price + '</li>');
+
     });
-    var orderedPizza = new Pizza(size, toppings);
-    //#final-order is for hiding/showing
-    //#pizza-list is for displaying ordered pizzas
-    $("#pizza-list").append('<li>'+ orderedPizza.size + ' ' + orderedPizza.toppings + ' Pizza' +
-                              '<br> Total: $' + orderedPizza.price + '</li>');
     $("#final-order").show();
-
   });
-
-
-});
+});//end of document ready function
