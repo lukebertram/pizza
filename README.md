@@ -1,12 +1,52 @@
-# _{Application Name}_
+# Pizza Time!
 
-#### _{Brief description of application}, {Date of current version}_
+#### A page where you can order the pizza of your dreams, 11/03/2017
 
-#### By _**{List of contributors}**_
+#### By Luke Bertram
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+This is a website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
+
+* Allow the user to choose toppings and size for the pizza they'd like to order.  
+* Create a pizza object constructor with properties for toppings and size.
+* Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
+
+## Specifications
+
+* Should accept an order for a single small pizza and return the base cost for a small pizza with no toppings
+  * Input: order - small pizza, no toppings
+  * Output: Total - $10
+
+
+* Accept an order of a single small, medium, or large pizza with no toppings and return the base cost for a pizza of the appropriate size
+  * Input: order - sm, med, or lg pizza
+  * Output: Total - $10, $14, or $18
+
+
+* Accept an order of a single pizza of any size with a single topping and provide the total cost of the pizza.
+  * Input: order - sm, med, or lg pizza with 1 topping
+  * Output: Total - $11, $15, or $19
+
+
+* Accept an order of a single pizza of any size with any number of toppings and provide the total cost of the pizza
+  * Input: order - sm, med, or lg pizza with multiple toppings
+  * Output: Total - sm: $10 + $1/topping; md: $14 + $1/topping; lg: $18 + $1/topping;
+
+
+* Accept an order for multiple pizzas and return the total cost of all pizzas
+  * Input:
+  * Output:
+
+
+* Allow users to select a delivery option and include a delivery fee in the total cost of the order
+  * Input:
+  * Output:
+
+* Require and accept a user's address information when user selects the delivery option on the order form.
+  * Input:
+  * Output:
+
 
 ## Setup/Installation Requirements
 
