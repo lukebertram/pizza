@@ -42,7 +42,7 @@ This is a website for a pizza company where a user can choose one or more indivi
 * Allow users to select a delivery option and include a delivery fee in the total cost of the order
   * Input: user selects a "for delivery" checkbox
   * Output: a delivery fee is added to the order total
-  
+
 
 * Accept a user's address information when user selects the delivery option on the order form.
   * Input: user selects a "for delivery" checkbox
@@ -56,7 +56,7 @@ This is a website for a pizza company where a user can choose one or more indivi
 
   ## Setup/Installation Requirements
 
-   For greatest ease of use, simply visit [this website](http://lukebertram.github.io/pizza) in your web browser of choice. However, if you're feeling frisky, you can also use the following steps to clone the project from [GitHub](http://github.com) and run it locally on your own computer:
+   For greatest ease of use, simply visit [this website](http://lukebertram.github.io/pizza/) in your web browser of choice. However, if you're feeling frisky, you can also use the following steps to clone the project from [GitHub](http://github.com) and run it locally on your own computer:
 
    * Visit the github page for [this project](http://github.com/lukebertram/pizza)
    * Click the "Clone or Download" button and copy the address found there. Alternatively, just copy this address to your clipboard: https://github.com/lukebertram/pizza.git

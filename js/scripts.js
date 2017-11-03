@@ -61,7 +61,7 @@ $(document).ready(function(){
           '<legend>Pizza size:</legend>' +
           '<div class="form-check">' +
             '<label class="form-check-label">' +
-              '<input type="radio" name="pizza-size' + pizzaCounter + '" class="form-check-input" value="Small">' +
+              '<input type="radio" name="pizza-size' + pizzaCounter + '" class="form-check-input" value="Small" checked>' +
             'Small - $10' +
             '</label>' +
           '</div>' +
@@ -137,6 +137,7 @@ $(document).ready(function(){
         '</div>' +
       '</div>'
     );
+    pizzaCounter++;
   });
 
 
@@ -146,9 +147,8 @@ $(document).ready(function(){
     //create a new order to hold pizzas
     order = new Order();
     $(".new-pizza").each(function() {
-      var name = $(this).find("input:radio").attr("name");
-      debugger
-      var size = $(this).find("input:radio[name=" + name + "]:checked").val()
+      var thisName = $(this).find("input:radio").attr("name");
+      var size = $(this).find("input:radio[name="+thisName+"]:checked").val();
       var toppings = [];
       $(this).find("input:checkbox[name=toppings]:checked").each(function(){
         toppings.push($(this).val());
