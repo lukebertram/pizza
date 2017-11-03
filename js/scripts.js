@@ -52,6 +52,94 @@ Order.prototype.setOrderTotal = function(){
 //Front-end flamboyance
 $(document).ready(function(){
 
+  //when the "add another pizza" button is pressed
+  $("#add-pizza").click(function(){
+    //YIKES! must find a way to DRY up this form generation
+    $(".order-pizzas").append(
+      '<div class="new-pizza">' +
+        '<div class="form-control form-group size">' +
+          '<legend>Pizza size:</legend>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="radio" name="pizza-size" class="form-check-input" value="Small">' +
+            'Small - $10' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="radio" name="pizza-size" class="form-check-input" value="Medium">' +
+            'Medium - $14' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="radio" name="pizza-size" class="form-check-input" value="Large">' +
+            'Large - $18' +
+            '</label>' +
+          '</div>' +
+        '</div>' +
+        '<div class="form-control form-group toppings">' +
+          '<legend>Pizza toppings (+$1 each):</legend>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="checkbox" name="toppings" class="form-check-input" value="Pepperoni">' +
+            'Pepperoni' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="checkbox" name="toppings" class="form-check-input" value="Olive">' +
+            'Olive' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="checkbox" name="toppings" class="form-check-input" value="Mushroom">' +
+            'Mushroom' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="checkbox" name="toppings" class="form-check-input" value="Green Pepper">' +
+            'Green Pepper' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="checkbox" name="toppings" class="form-check-input" value="Onion">' +
+            'Onion' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="checkbox" name="toppings" class="form-check-input" value="Sausage">' +
+            'Sausage' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="checkbox" name="toppings" class="form-check-input" value="Artichoke">' +
+            'Artichoke' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="checkbox" name="toppings" class="form-check-input" value="Canadian Bacon">' +
+            'Canadian Bacon' +
+            '</label>' +
+          '</div>' +
+          '<div class="form-check">' +
+            '<label class="form-check-label">' +
+              '<input type="checkbox" name="toppings" class="form-check-input" value="Pineapple">' +
+            'Pineapple' +
+            '</label>' +
+          '</div>' +
+        '</div>' +
+      '</div>'
+                              );
+
+
+  });
 
 
   //when the order form is submitted
