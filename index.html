@@ -10,97 +10,104 @@
   </head>
   <body>
     <div class="container">
-      <h1>Order a Pizza!</h1>
+      <h1>Pizza Order Form</h1>
       <form id="order-form" class="form-control">
       <!-- SELECT PIZZA SIZE (radio buttons) -->
         <div class="form-control form-group size">
           <legend>Pizza size:</legend>
           <div class="form-check">
             <label class="form-check-label">
-              <input type="radio" name="pizza-size" class="form-check-input" value="small">
+              <input type="radio" name="pizza-size" class="form-check-input" value="Small">
             Small - $10
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label">
-              <input type="radio" name="pizza-size" class="form-check-input" value="medium">
+              <input type="radio" name="pizza-size" class="form-check-input" value="Medium">
             Medium - $14
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label">
-              <input type="radio" name="pizza-size" class="form-check-input" value="large">
+              <input type="radio" name="pizza-size" class="form-check-input" value="Large">
             Large - $18
             </label>
           </div>
         </div>
       <!-- SELECT PIZZA TOPPINGS (check boxes)-->
-      <div class="form-control form-group size">
-        <legend>Pizza toppings (+$1 each):</legend>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" name="toppings" class="form-check-input" value="pepperoni">
-          Pepperoni
-          </label>
+        <div class="form-control form-group toppings">
+          <legend>Pizza toppings (+$1 each):</legend>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" name="toppings" class="form-check-input" value="Pepperoni">
+            Pepperoni
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" name="toppings" class="form-check-input" value="Olive">
+            Olive
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" name="toppings" class="form-check-input" value="Mushroom">
+            Mushroom
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" name="toppings" class="form-check-input" value="Green Pepper">
+            Green Pepper
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" name="toppings" class="form-check-input" value="Onion">
+            Onion
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" name="toppings" class="form-check-input" value="Sausage">
+            Sausage
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" name="toppings" class="form-check-input" value="Artichoke">
+            Artichoke
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" name="toppings" class="form-check-input" value="Canadian Bacon">
+            Canadian Bacon
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" name="toppings" class="form-check-input" value="Pineapple">
+            Pineapple
+            </label>
+          </div>
         </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" name="toppings" class="form-check-input" value="olive">
-          Olive
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" name="toppings" class="form-check-input" value="mushroom">
-          Mushroom
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" name="toppings" class="form-check-input" value="green pepper">
-          Green Pepper
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" name="toppings" class="form-check-input" value="onion">
-          Onion
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" name="toppings" class="form-check-input" value="sausage">
-          Sausage
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" name="toppings" class="form-check-input" value="artichoke">
-          Artichoke
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" name="toppings" class="form-check-input" value="canadian bacon">
-          Canadian Bacon
-          </label>
-        </div>
-        <div class="form-check">
-          <label class="form-check-label">
-            <input type="checkbox" name="toppings" class="form-check-input" value="pineapple">
-          Pineapple
-          </label>
+        <button type="submit" class="btn btn-primary">Place Order</button>
+      </form>
+
+      <!-- ORDER RESULT -->
+      <div class="row">
+        <div class="col-sm-12 card hidden" id="final-order">
+          <div class="card-header">
+            Your order:
+          </div>
+          <div class="card-body">
+            <ul id="pizza-list">
+              <!-- ORDERED PIZZAS LISTED HERE -->
+            </ul>
+          </div>
         </div>
       </div>
-        <div class="form-check toppings form-control">
-          <input type="checkbox" name="toppings" value="green pepper">
-          <input type="checkbox" name="toppings" value="onion">
-          <input type="checkbox" name="toppings" value="sausage">
-          <input type="checkbox" name="toppings" value="artichoke">
-          <input type="checkbox" name="toppings" value="canadian bacon">
-          <input type="checkbox" name="toppings" value="pineapple">
-        </div>
-      </form>
     </div>
   </body>
 </html>
